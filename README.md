@@ -10,20 +10,20 @@ This code is based on the paper *“The aerodynamics of the beautiful game”* b
 All the necessory things like the `Ball` class are in the `ball.py` module. To create a simulation, first load the necessory classes
 from the `ball` module:
 
-```{python} 
+```python 
 >>> from ball import Vector, World, Ball 
 ```
 
 Simulation settings like gravity or drag coefficient are the attributes of the world object. To create a world with a drag coefficient 
 of 0.4 and magnus effect coefficient of 0.5, with default values for other attributes, 
 
-```{python}
+```python
 >>> world = World(dragConst=0.4, spinConst=0.5)
 ```
 
 Then create a ball object with some initial position, velocity and spin and link the world object to it.
 
-```{python}
+```python
 >>> posInit = Vector(50., 10., 0.) # initial position
 >>> velInit = Vector.heading(theta=5., phi=35., mag=55.) # initial velocity
 >>> Omega   = Vector.heading(theta=45., phi=0., mag=40.) # spin 
@@ -34,7 +34,7 @@ Then create a ball object with some initial position, velocity and spin and link
 
 Then, run the simulation with the forces you want. e.g.,
 
-```{python}
+```python
 >>> while True:
 ...   ball.applyForce(gravity=True, drag=True, spin=True) # apply all forces
 ...   ball.update(dt=0.01)
