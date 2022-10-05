@@ -5,6 +5,10 @@ drag and magnus force. Forces like wind are not considered. Also, the ball is as
 
 This code is based on the paper *“The aerodynamics of the beautiful game”* by John W. M. Bush.
 
+**Disclaimer**: This code only uses a simplified version of the full ball physics, as described in the reference, and considere 
+parameters like air density or drag coefficient as free parameters. So the results may not be as accurate enough to describe the 
+real life situations.
+
 ## Using the Code
 
 All the necessory things like the `Ball` class are in the `ball.py` module. To create a simulation, first load the necessory classes
