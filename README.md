@@ -43,3 +43,7 @@ Then, run the simulation with the forces you want. e.g.,
 ... 
 >>>
 ```
+Path of the ball will be stored in the `path` attribute of the ball object. It is a `Path` object with attributes `pos` (a list of position 
+of the ball at diffrent times), `vel` (list of velocities) and `time`.
+
+
